@@ -18,6 +18,19 @@
       span a{
         color:#fff;
       }
+      span.zerarSpan{
+        background-color: rgba(0,0,0,0);
+        padding: 0;
+        border-radius: 0;
+      }
+      a#copiar{
+        cursor: pointer;
+      }
+      .footer{
+        text-align: center;
+        color:#4c4d4e;
+        margin-top: 100px;
+      }
     </style>
 </head>
 <body style="background-color: #0D1117;">
@@ -29,9 +42,9 @@
                   <a class="nav-link" href="#item-1">credenciais git</a>
                   <a class="nav-link" href="#item-2">Para iniciar</a>
                   <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ms-3 my-1" >> super usuário</a>
-                    <a class="nav-link ms-3 my-1" >> entrar na develop</a>
-                    <a class="nav-link ms-3 my-1" >> puxar alterações anteriores</a>
+                    <a class="nav-link ms-3 my-1">> super usuário</a>
+                    <a class="nav-link ms-3 my-1">> entrar na develop</a>
+                    <a class="nav-link ms-3 my-1">> puxar alterações anteriores</a>
                   </nav>
                   <a class="nav-link" href="#item-3">*Branch</a>
                   <a class="nav-link" href="#item-4">mexendo com o Flow</a>
@@ -49,7 +62,6 @@
                   <nav class="nav nav-pills flex-column">
                     <a class="nav-link ms-3 my-1">> finalizando hotfix</a>
                   </nav>
-                  <a class="nav-link" href="#item-7">considerações finais</a>
                 </nav>
               </nav>
             </div>
@@ -59,16 +71,16 @@
                 <div id="item-1" class="mb-5 mt-5">
                   <h4>Credenciais do Git</h4>
                   <p><em>usuário:</em></p><span>
-                    Gustavo-erades
-                    <a id="copiar" onclick="copiar()">
+                    <span id="user" class="zerarSpan">Gustavo-erades</span>
+                    <a id="copiar" onclick="copiar('user')">
                       <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                     </a>
                   </span>
                   <br><br>
                   <p><em>Senha:</em></p>
                   <span>
-                    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
-                    <a id="copiar" onclick="copiar()">
+                    <span class="zerarSpan" id="senha">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</span>
+                    <a id="copiar" onclick="copiar('senha')">
                       <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                     </a>
                   </span>
@@ -82,26 +94,26 @@
                     <h4>Iniciando o projeto</h4>
                     <p>* Antes de começar o projeto é necessário entrr na branch <span>develop</span> e dar o <span>pull</span> para que os arquivs fiquem atualizados, assim evitando conflitos.</p>
                   </div>
-                  <div id="item-2-1" class="mt-5">
+                  <div class="mt-5">
                     <h5>- Super usuário</h5>
                     <p>para <u>todos</u> os comandos é necessário usar o super-usuário do <u>Linux</u>: <span>sudo</span> seguido do comando <span>git</span></p>
                   </div>
-                  <div id="item-2-2" class="mt-5">
+                  <div class="mt-5">
                     <h5>- Entrando na branch</h5>
                     <p>Para acessar a branch referente ao ambiente de desenvolvimento é necessário rodar o comando:</p>
                     <span>
-                      sudo  git checkout develop
-                      <a id="copiar" onclick="copiar()">
+                      <span id="checkout" class="zerarSpan">sudo  git checkout develop</span>
+                      <a id="copiar" onclick="copiar('checkout')">
                         <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                       </a>
                     </span>
                   </div>
-                  <div id="item-2-3" class="mt-5">
+                  <div class="mt-5">
                     <h5>- Sincronizando alterações</h5>
                     <p>Para evitar conflitos e garantir que o projeto esteja atualizado, é necessario rodar o comando:</p>
                     <span>
-                      sudo git pull prigin develop
-                      <a id="copiar" onclick="copiar()">
+                      <span id="gitpull" class="zerarSpan">sudo git pull prigin develop</span>
+                      <a id="copiar" onclick="copiar('gitpull')">
                         <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                       </a>
                     </span>
@@ -120,8 +132,8 @@
                     </em>
                   </p>
                   <span>
-                    Num_nomeDev_titulo_NumMes_Ano
-                    <a id="copiar" onclick="copiar()">
+                    <span id="branch" class="zerarSpan">Num_nomeDev_titulo_NumMes_Ano</span>
+                    <a id="copiar" onclick="copiar('branch')">
                       <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                     </a>
                   </span>
@@ -134,32 +146,32 @@
                     <h4>Flow</h4>
                     <p>Antes do <span>add</span> é preciso usar o flow a depender do tipo de implementação feita</p>
                   </div>
-                  <div id="item-4-1" class="mt-5">
+                  <div class="mt-5">
                     <h5>- Feature</h5>
                     <p>Caso a implementação seja referente a uma feature (nova funcionalidade) é necessário rodar esse comando:</p>
                     <span>
-                      feature start <a href="#item-3"> *Branch</a>
-                      <a id="copiar" onclick="copiar()">
+                      <span id="feature" class="zerarSpan">feature start </span><a href="#item-3"> *Branch</a>
+                      <a id="copiar" onclick="copiar('feature')">
                         <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                       </a>
                     </span>
                   </div>
-                  <div id="item-4-2" class="mt-5">
+                  <div class="mt-5">
                     <h5>- Bugfix</h5>
                     <p>Caso a implementação seja referente a um bug (consertar bug) é necessário rodar esse comando:</p>
                     <span>
-                      bugfix start <a href="#item-3"> *Branch</a>
-                      <a id="copiar" onclick="copiar()">
+                      <span class="zerarSpan" id="bugfix">bugfix start </span><a href="#item-3"> *Branch</a>
+                      <a id="copiar" onclick="copiar('bugfix')">
                         <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                       </a>
                     </span>
                   </div>
-                  <div id="item-4-3" class="mt-5">
+                  <div class="mt-5">
                     <h5>- Hotfix</h5>
                     <p>Caso a implementação seja referente a uma hotfix (correção rápida para um problema crítico) é necessário rodar esse comando:</p>
                     <span>
-                      hotfix start <a href="#item-3"> *Branch</a>
-                      <a id="copiar" onclick="copiar()">
+                      <span class="zerarSpan" id="hotfix">hotfix start </span><a href="#item-3"> *Branch</a>
+                      <a id="copiar" onclick="copiar('hotfix')">
                         <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                       </a>
                     </span>
@@ -174,22 +186,22 @@
                   <h4>Commitando alterações</h4>
                   <p>para realizar commits é necessário dois passos.</p>
                 </div>
-                <div id="item-5-1"  class="mt-5">
+                <div class="mt-5">
                   <h5>- Adicionando alterações</h5>
                   <p>Para adicionar as alterações basta rodar o comando:</p>
                   <span>
-                    sudo git add .
-                    <a id="copiar" onclick="copiar()">
+                    <span class="zerarSpan" id="gitadd">sudo git add .</span>
+                    <a id="copiar" onclick="copiar('gitadd')">
                       <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                     </a>
                   </span>
                 </div>
-                <div id="item-5-2"  class="mt-5">
+                <div  class="mt-5">
                   <h5>- Realizando commit</h5>
                   <p>Ao realizar o commit é possível especificar melhor o que foi implementado com o comando:</p>
                   <span>
-                    sudo git commit -m "#Num da issue_tipo da branch | texto"
-                    <a id="copiar" onclick="copiar()">
+                    <span class="zerarSpan" id="gitcommit">sudo git commit -m "#Num da issue_tipo da branch | texto"</span>
+                    <a id="copiar" onclick="copiar('gitcommit')">
                       <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                     </a>
                   </span>
@@ -203,22 +215,26 @@
                     <h4>Publicando alterações</h4>
                     <p>para publicar suas alterações basta rodar o comando:</p>
                     <span>
-                      sudo git flow tipo_da_branch publish <a href="#item-3">*Branch</a>
-                      <a id="copiar" onclick="copiar()">
+                      <span class="zerarSpan" id="publish">sudo git flow tipo_da_branch publish </span><a href="#item-3">*Branch</a>
+                      <a id="copiar" onclick="copiar('publish')">
                         <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                       </a>
                     </span>
                   </div>
-                  <div id="item-6-1"  class="mt-5">
+                  <div  class="mt-5">
                     <h5>- Finalizando hotfix</h5>
                     <p>*Caso o tipo da branch seja hofix, será necessário finalizar com esse comando após a publicação:</p>
                     <span>
-                      sudo git flow hotfix finish <a href="#item-3">*Branch</a>
-                      <a id="copiar" onclick="copiar()">
+                      <span class="zerarSpan" id="hotfixfinish">sudo git flow hotfix finish </span><a href="#item-3">*Branch</a>
+                      <a id="copiar" onclick="copiar('hotfixfinish')">
                         <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/copy.png" alt="copy"/>
                       </a>
                     </span>
                   </div>
+                </div>
+                <hr>
+                <div class="footer">
+                    &copy; development by Gustavo Êrades
                 </div>
 
               </div>
@@ -227,8 +243,15 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-      function cpiar(texto){
-        navigator.clipboard.writeText(texto);
+      function copiar(texto){
+        var valor=document.getElementById(texto).innerHTML;
+        if(texto=='feature' || texto=='bugfix' || texto=='hotfix'){
+          valor='sudo git flow '+valor
+        }
+        if(texto=='feature' || texto=='bugfix' || texto=='hotfix' || texto=='publish' || texto=='hotfixfinish'){
+          valor=valor+'Num_nomeDev_titulo_NumMes_Ano';
+        }
+        navigator.clipboard.writeText(valor);
       }
     </script>
   </body>
