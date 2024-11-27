@@ -251,6 +251,9 @@
         if(texto=='feature' || texto=='bugfix' || texto=='hotfix' || texto=='publish' || texto=='hotfixfinish'){
           valor=valor+'Num_nomeDev_titulo_NumMes_Ano';
         }
+        if(texto=='senha'){
+            valor=valor.slice(1)
+        }
         navigator.clipboard.writeText(valor);
       }
     </script>
